@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chats - Event Opportunity</title>
+    <link rel="stylesheet" href="chat.css">
+</head>
+<body>
+    <section class="header">
+        <nav>
+            <a href="practice page.html"><img src="EventLogo2.png" alt="Event Logo"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="practice page.html">HOME</a></li>
+                    <li><a href="Evntnav.html" >EVENTS</a></li>
+                    <li class="active"><a href="chat.html" style="color: #F44336;">CHATS</a></li>
+                    <li><a href="pay.html">PAYMENTS</a></li>
+                    <li ><a href="contact.html" >CONTACT</a></li>
+                    <li><a href="profile.html">PROFILE</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+    </section>
+    <div class="chat-container">
+        <!-- Coordinators List -->
+        <div class="coordinator-list">
+            <h3>Coordinators</h3>
+            <ul>
+                <li class="active" data-chat="madan-chat">Madan</li>
+                <li data-chat="aniket-chat">Aniket</li>
+                <li data-chat="sneha-chat">Sneha</li>
+                <li data-chat="nora-chat">Nora</li>
+            </ul>
+        </div>
+
+        <!-- Chat Sections -->
+        <div class="chat-main active" id="madan-chat">
+            <div class="chat-header">Chat with Madan</div>
+            <div class="chat-box">
+                <div class="message user">
+                    <div class="text">Hello Madan! I need help with the event registration.</div>
+                </div>
+                <div class="message coordinator">
+                    <div class="avatar"></div>
+                    <div class="text">Sure, I can assist you with that.</div>
+                </div>
+            </div>
+            <div class="chat-input">
+                <input type="text" placeholder="Type your message here...">
+                <button type="submit">Send</button>
+            </div>
+        </div>
+
+        <div class="chat-main" id="aniket-chat">
+            <div class="chat-header">Chat with Aniket</div>
+            <div class="chat-box">
+                <div class="message user">
+                    <div class="text">Hi Aniket! Can you help me with the schedule?</div>
+                </div>
+                <div class="message coordinator">
+                    <div class="avatar"></div>
+                    <div class="text">Of course, let's go through it together.</div>
+                </div>
+            </div>
+            <div class="chat-input">
+                <input type="text" placeholder="Type your message here...">
+                <button type="submit">Send</button>
+            </div>
+        </div>
+
+        <div class="chat-main" id="sneha-chat">
+            <div class="chat-header">Chat with Sneha</div>
+            <div class="chat-box">
+                <div class="message user">
+                    <div class="text">Hey Sneha! I have a question about the venue.</div>
+                </div>
+                <div class="message coordinator">
+                    <div class="avatar"></div>
+                    <div class="text">Sure, what would you like to know?</div>
+                </div>
+            </div>
+            <div class="chat-input">
+                <input type="text" placeholder="Type your message here...">
+                <button type="submit">Send</button>
+            </div>
+        </div>
+
+        <div class="chat-main" id="nora-chat">
+            <div class="chat-header">Chat with Nora</div>
+            <div class="chat-box">
+                <div class="message user">
+                    <div class="text">Hi Nora! Could you assist with the catering details?</div>
+                </div>
+                <div class="message coordinator">
+                    <div class="avatar"></div>
+                    <div class="text">Yes, I'll send you the details shortly.</div>
+                </div>
+            </div>
+            <div class="chat-input">
+                <input type="text" placeholder="Type your message here...">
+                <button type="submit">Send</button>
+            </div>
+            <div class="chat-main" id="Shraddha-chat">
+                <div class="chat-header">Chat with Shraddha</div>
+                <div class="chat-box">
+                    <div class="message user">
+                        <div class="text">Hi Shraddha! Could you assist with the family function details?</div>
+                    </div>
+                    <div class="message coordinator">
+                        <div class="avatar"></div>
+                        <div class="text">Yes, I'll send you the details within an hour.</div>
+                    </div>
+                </div>
+                <div class="chat-input">
+                    <input type="text" placeholder="Type your message here...">
+                    <button type="submit">Send</button>
+                </div>
+                <div class="chat-main" id="nora-chat">
+            <div class="chat-header">Chat with Nora</div>
+            
+            <div class="chat-box">
+                <div class="message user">
+                    <div class="text">Hi Nora! Could you assist with the catering details?</div>
+                </div>
+                <div class="message coordinator">
+                    <div class="avatar"></div>
+                    <div class="text">Yes, I'll send you the details shortly.</div>
+                </div>
+            </div>
+            <div class="chat-input">
+                <input type="text" placeholder="Type your message here...">
+                <button type="submit">Send</button>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        document.querySelectorAll('.coordinator-list li').forEach(function(coordinator) {
+            coordinator.addEventListener('click', function() {
+                // Remove 'active' class from all chat sections and coordinators
+                document.querySelectorAll('.chat-main').forEach(function(chat) {
+                    chat.classList.remove('active');
+                });
+                document.querySelectorAll('.coordinator-list li').forEach(function(li) {
+                    li.classList.remove('active');
+                });
+
+                // Add 'active' class to the clicked coordinator and the corresponding chat section
+                this.classList.add('active');
+                document.getElementById(this.getAttribute('data-chat')).classList.add('active');
+            });
+        });
+    </script>
+
+</body>
+</html>

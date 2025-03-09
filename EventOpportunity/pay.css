@@ -1,0 +1,198 @@
+/* General Reset */
+{
+    margin: 0;
+    padding: 0;
+}
+/* Internal CSS */
+nav {
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav img {
+    width: 175px;
+    background-color: azure;
+    border-radius: 10px;
+}
+
+.nav-links {
+    flex: 1;
+    text-align: right;
+    margin-right: 174px;
+}
+
+.nav-links ul {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.nav-links ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+    color: black;
+}
+
+.nav-links ul li a {
+    color: black;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+/* Hover Effect for All Links Except "EVENTS" */
+.nav-links ul li:not(.active)::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #f44336;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.nav-links ul li:not(.active):hover::after {
+    width: 100%;
+}
+
+/* Add Underline to "EVENTS" */
+.nav-links ul li.active a {
+    position: relative;
+    color: #f44336;
+    text-decoration: none;
+}
+
+.nav-links ul li.active a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    /* Adjust position if needed */
+    width: 100%;
+    height: 2px;
+    background: #f44336;
+}
+
+/* Disable Hover Effect for "EVENTS" */
+.nav-links ul li.active:hover::after {
+    width: 100%;
+    /* Keep the underline width constant on hover */
+}
+
+/* Hide Menu Icon */
+nav .fa {
+    display: none;
+}
+
+.payment-section {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.payment-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+.tabs {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.tabs button {
+    padding: 8px 16px;
+    border: none;
+    background-color: #ddd;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.tabs button.active {
+    background-color: #f44336;
+    color: #fff;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #f44336;
+    outline: none;
+}
+
+.pay-now-btn,
+.receive-payment-btn {
+    display: block;
+    width: 50%;
+    padding: 10px;
+    font-size: 14px;
+    color: #fff;
+    background-color: #f44336;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+    margin: 10px auto;
+}
+
+.pay-now-btn:hover,
+.receive-payment-btn:hover {
+    background-color: #d32f2f;
+}
+
+.payment-history {
+    max-height: 200px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+.payment-history h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.payment-history ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.payment-history ul li {
+    padding: 5px 0;

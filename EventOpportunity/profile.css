@@ -1,0 +1,253 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navigation Bar */
+.header {
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    display: flex;
+    padding: 3% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav img {
+    width: 175px;
+    background-color: azure;
+    border-radius: 10px;
+    margin-left: 8px;
+}
+
+.nav-links {
+    flex: 1;
+    text-align: right;
+    margin-right: 201px;
+}
+
+.nav-links ul {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.nav-links ul li a {
+    color: black;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+/* Hover Effect for All Links Except "EVENTS" */
+.nav-links ul li:not(.active)::after {
+    content: '';
+    width: 0;
+    height: 2px;
+    background: #f44336;
+    display: block;
+    margin: auto;
+    transition: width 0.5s;
+}
+
+.nav-links ul li:not(.active):hover::after {
+    width: 100%;
+}
+
+/* Add Underline to "EVENTS" */
+.nav-links ul li.active a {
+    color: #f44336;
+    text-decoration: none;
+}
+
+.nav-links ul li.active a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 2px;
+    background: #f44336;
+}
+
+/* Disable Hover Effect for "EVENTS" */
+.nav-links ul li.active:hover::after {
+    width: 100%;
+}
+
+/* Hide Menu Icon */
+nav .fa {
+    display: none; /* Adjust as needed based on JavaScript */
+}
+
+/* Profile Section */
+.profile-section {
+    width: 100%;
+    padding: 0 6%; /* Match padding with navigation */
+    background-color: #f0f0f0;
+}
+
+.profile-container {
+    width: 100%;
+    max-width: 1200px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+/* Profile Header Section */
+.profile-header {
+    display: flex;
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+    background-color: #fff;
+    align-items: flex-start;
+}
+
+.profile-photo {
+    flex-shrink: 0;
+    margin-right: 40px;
+    position: relative;
+}
+
+.profile-photo img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid black;
+    margin-left: 100px;
+}
+
+.profile-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-left: 80px;
+}
+
+.profile-buttons a {
+    color: White;
+    text-decoration: none;
+}
+
+.profile-info h2 {
+    margin: 0;
+    font-size: 28px;
+    color: #333;
+}
+
+.profile-stats {
+    display: flex;
+    gap: 20px;
+    margin-top: 10px;
+    font-size: 16px;
+    color: #555;
+}
+
+.profile-stats div {
+    font-weight: bold;
+}
+
+.profile-buttons {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.profile-buttons button {
+    background-color: #F44336;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.profile-buttons button:hover {
+    background-color: #d32f2f;
+}
+
+/* Profile Gallery Section */
+.profile-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding: 20px;
+    border-top: 1px solid #ddd;
+    background-color: #fafafa;
+}
+
+.profile-gallery img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: box-shadow 0.3s ease;
+    border-radius: 8px;
+}
+
+.profile-gallery img:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Upload Section */
+.upload-section {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    border-top: 1px solid #ddd;
+    background-color: #fafafa;
+}
+
+.upload-section label {
+    display: inline-block;
+    background-color: #F44336;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.upload-section input[type="file"] {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .profile-header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .profile-photo {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .profile-info {
+        margin-left: 0;
+    }
+
+    .profile-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+}

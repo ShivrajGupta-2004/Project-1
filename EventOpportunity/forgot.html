@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forgot Password</title>
+  <link rel="stylesheet" href="forgot.css">
+</head>
+<body>
+  <div class="container">
+    <div class="form-container">
+      <h2>New Password</h2>
+      <form id="forgotForm">
+        <div class="form-group">
+          <input type="email" id="Email" required>
+          <label for="Email">Email : </label>
+        </div>
+        <div class="form-group">
+          <input type="password" id="newPassword" required>
+          <label for="newPassword">Create New Password : </label>
+          <span class="show-password" onclick="togglePasswordVisibility()">👁️</span>
+        </div>
+        <div class="form-group">
+          <input type="password" id="confirmPassword" required>
+          <label for="confirmPassword">Confirm Password : </label>
+        </div>
+
+        <button type="submit" id="btn">Save</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    // Handle forgot password form submission
+    document.getElementById('forgotForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+      const email = document.getElementById('Email').value.trim();
+      const newPassword = document.getElementById('newPassword').value.trim();
+      const confirmPassword = document.getElementById('confirmPassword').value.trim();
+
+      // Check if the email matches the registered one
+      const registeredEmail = localStorage.getItem('registeredEmail');
+      if (email !== registeredEmail) {
+        alert("Email does not match the registered one.");
+        return;
+      }
+
+      // Check if passwords match
+      if (newPassword !== confirmPassword) {
+        alert("Passwords do not match.");
+        return;
+      }
+
+      // Update password in localStorage
+      localStorage.setItem('registeredPassword', newPassword);
+      alert("Password successfully changed!");
+      window.location.href = "log-in.html"; // Redirect to login page
+    });
+  </script>
+</body>
+</html>

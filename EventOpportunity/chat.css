@@ -1,0 +1,222 @@
+/* General Reset */
+{
+    margin: 0;
+    padding: 0;
+}
+
+/* Navigation Bar */
+nav {
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav img {
+    width: 175px;
+    background-color: azure;
+    border-radius: 10px;
+}
+
+.nav-links {
+    flex: 1;
+    text-align: right;
+    margin-right: 174px;
+}
+
+.nav-links ul {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.nav-links ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+    color: black;
+}
+
+.nav-links ul li a {
+    color: black;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+/* Hover Effect for All Links Except "EVENTS" */
+.nav-links ul li:not(.active)::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #f44336;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.nav-links ul li:not(.active):hover::after {
+    width: 100%;
+}
+
+/* Add Underline to "EVENTS" */
+.nav-links ul li.active a {
+    position: relative;
+    color: #f44336;
+    text-decoration: none;
+}
+
+.nav-links ul li.active a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px; /* Adjust position if needed */
+    width: 100%;
+    height: 2px;
+    background: #f44336;
+}
+
+/* Disable Hover Effect for "EVENTS" */
+.nav-links ul li.active:hover::after {
+    width: 100%; /* Keep the underline width constant on hover */
+}
+
+/* Hide Menu Icon */
+nav .fa {
+    display: none;
+}
+
+/* Chat Container Styling */
+.chat-container {
+    display: flex;
+    height: 100vh;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+/* Sidebar for Coordinators List */
+.coordinator-list {
+    width: 25%;
+    background-color: #f9f9f9;
+    border-right: 1px solid #e0e0e0;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.coordinator-list h3 {
+    margin: 0;
+    font-size: 20px;
+    color: #333;
+}
+
+.coordinator-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.coordinator-list li {
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.coordinator-list li:hover {
+    background-color: #f4f4f4;
+}
+
+.coordinator-list li.active {
+    background-color: #f44336;
+    color: #fff;
+}
+
+/* Main Chat Area Styling */
+.chat-main {
+    flex: 1;
+    display: none;
+    flex-direction: column;
+    background-color: #f4f4f4;
+}
+
+.chat-main.active {
+    display: flex;
+}
+
+.chat-header {
+    padding: 15px;
+    background-color: #f44336;
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.chat-box {
+    flex: 1;
+    padding: 15px;
+    overflow-y: auto;
+}
+
+.message {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: flex-end;
+}
+
+.message.user .text {
+    background-color: #e0e0e0;
+    color: #000;
+    border-radius: 10px;
+    padding: 10px;
+    max-width: 60%;
+}
+
+.message.coordinator {
+    flex-direction: row-reverse;
+}
+
+.message.coordinator .text {
+    background-color: #f44336;
+    color: #fff;
+    border-radius: 10px;
+    padding: 10px;
+    max-width: 60%;
+}
+
+.message.coordinator .avatar {
+    width: 30px;
+    height: 30px;
+    background-color: #e0e0e0;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+
+.chat-input {
+    display: flex;
+    padding: 10px;
+    background-color: #fff;
+    border-top: 1px solid #e0e0e0;
+}
+
+.chat-input input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 20px;
+    outline: none;
+    margin-right: 10px;
+}
+
+.chat-input button {
+    padding: 10px 15px;
+    background-color: #f44336;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.chat-input button:hover {
+    background-color: #d32f2f;
+}

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+    <link rel="stylesheet" href="e.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="e.java"></script>
+</head>
+<body>
+    <section class="header">
+        <nav>
+            <a href="practice page.html"><img src="EventLogo2.png" alt="Event Logo"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="practice page.html">HOME</a></li>
+                    <li class="active"><a href="Evntnav.html" style="color: #F44336;">EVENTS</a></li>
+                    <li><a href="chat.html">CHATS</a></li>
+                    <li><a href="pay.html">PAYMENTS</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                    <li><a href="profile.html">PROFILE</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+    </section>  
+    
+   <!-- Join Event Section -->
+<section class="join-event">
+    <h1>Search an Event</h1>
+    <p>Select an event from the list to join and get more details about it.</p>
+    <div class="join-form">
+        <label for="event-select">Choose an Event:</label>
+        <select id="event-select">
+        </select>
+        <button type="button" class="join-btn">Search</button>
+    </div>
+</section>
+
+<!-- Upcoming Events Section -->
+<section class="upcoming">
+    <h1>Upcoming Events</h1>
+    <div class="row" id="event-container">
+        <!-- Event items will be dynamically inserted here -->
+    </div>
+    <button id="add-event-btn">Add Event</button>
+</section>
+
+<!-- Event Details Modal -->
+<div id="event-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h2 id="modal-title"></h2>
+        <p id="modal-date"></p>
+        <p id="modal-location"></p>
+        <p id="modal-payment"></p>
+        <p id="modal-description"></p>
+        <p id="modal-dress-code"></p>
+        <p id="modal-participants"></p>
+        <p id="modal-timing"></p>
+        <button id="join-event-btn" class="event-btn">Join Event</button>
+    </div>
+</div>
+
+<!-- Add Event Modal -->
+<div id="add-event-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" id="close-add-event">&times;</span>
+        <h2>Add New Event</h2>
+        <form id="add-event-form">
+            <div class="form-group">
+                <label for="type">Type of Event:</label>
+                <input type="text" id="type" required>
+            </div>
+            <div class="form-group">
+                <label for="date">Date:</label>
+                <input type="date" id="date" required>
+            </div>
+            <div class="form-group">
+                <label for="location">Location:</label>
+                <input type="text" id="location" required>
+            </div>
+            <div class="form-group">
+                <label for="payment">Payment:</label>
+                <input type="text" id="payment" required>
+            </div>
+            <div class="form-group">
+                <label for="timing">Timing:</label>
+                <input type="text" id="timing" required>
+            </div>
+            <div class="form-group">
+                <label for="participants">Participants:</label>
+                <input type="text" id="participants" required>
+            </div>
+            <div class="form-group">
+                <label for="dress-code">Dress Code:</label>
+                <input type="text" id="dress-code" required>
+            </div>
+            <div class="form-group">
+                <label for="notic">Notice:</label>
+                <textarea id="notic" required></textarea>
+            </div>
+            <button type="submit">Add Event</button>
+        </form>
+    </div>
+</div>
+
+
+</body>
+</html>

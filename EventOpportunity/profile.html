@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram-like Profile Section</title>
+    <link rel="stylesheet" href="profile.css"> <!-- Link to the external CSS file -->
+</head>
+<body>
+    <section class="header">
+        <nav>
+            <a href="practice-page.html"><img src="EventLogo2.png" alt="Event Logo"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="practice page.html">HOME</a></li>
+                    <li><a href="Evntnav.html">EVENTS</a></li>
+                    <li ><a href="chat.html" >CHATS</a></li>
+                    <li><a href="pay.html">PAYMENTS</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                    <li  class="active"><a href="profile.html" style="color: #F44336;">PROFILE</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+    </section>
+    <section class="profile-section">
+        <div class="profile-container">
+            <div class="profile-header">
+                <div class="profile-photo">
+                    <img src="profileimg.jpg" alt="Profile Photo">
+                </div>
+                <div class="profile-info">
+                    <h2>Disha Bist</h2>
+                    <div class="profile-stats">
+                        <div><span>12</span> Events Visited</div>
+                        <div><span>8.9/10</span> Rating</div>
+                        <div><span>4478</span> Followers</div>
+                        <div><span>780</span> Following</div>
+                    </div>
+                    <div class="profile-buttons">
+                        <button id="follow-btn">Follow</button>
+                        <button><a href="chat.html" >Message</a></button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="profile-gallery">
+                <img src="prof1.jpeg" alt="Event Photo 1">
+                <img src="prof2.webp" alt="Event Photo 2">
+                <img src="prof3.avif" alt="Event Photo 3">
+                <img src="prof4.jpg" alt="Event Photo 4">
+                <!-- Add more images as needed -->
+            </div>
+            
+            <div class="upload-section">
+                <label for="file-upload">Add Event Photo</label>
+                <input type="file" id="file-upload" accept="image/*">
+            </div>
+        </div>
+    </section>
+    
+    <script>
+    document.getElementById('file-upload').addEventListener('change', function(event) {
+        const file = event.target.files[0];
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                const img = document.createElement('img');
+                img.src = e.target.result;
+                img.alt = 'Uploaded Event';
+                document.querySelector('.profile-gallery').appendChild(img);
+            };
+            reader.readAsDataURL(file);
+        }
+    });
+
+    document.getElementById('follow-btn').addEventListener('click', function() {
+        const button = this;
+        button.textContent = button.textContent === 'Follow' ? 'Following' : 'Follow';
+    });
+    </script>
+</body>
+</html>

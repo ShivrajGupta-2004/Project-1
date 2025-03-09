@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EventOpportunity</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="http://fonts.googlreapis.com/css2? family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" >
+</head>
+<body>
+    <section class="header">
+        <nav>
+            <a href="practice page.html"><img src="EventLogo2.png" alt="Event Logo"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li class="active"><a href="practice page.html" style="color: #F44336;">HOME</a></li>
+                    <li><a href="Evntnav.html">EVENTS</a></li>
+                    <li><a href="chat.html">CHATS</a></li>
+                    <li><a href="pay.html">PAYMENTS</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                    <li><a href="profile.html">PROFILE</a></li>
+                </ul>
+
+            </div>
+            <a href="log-in.html" class="login-register">LOGIN / REGISTER</a>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <div class="text-box">
+            <h2>#Events are our 1st priority.</h2>
+            <h1>India's First Event Staffing & Opportunity <br>Matching Platform</h1>
+            <p>At EventOpportunity, we bridge the gap between event organizers and skilled professionals.<br> From
+                posting event opportunities to searching for the perfect role, we <br> guarantee your success every step
+                of the way.</p>
+            <a href="#" class="hero-btn">Visit us to know more</a>
+        </div>
+    </section>
+    <section class="info">
+        <h1>Elevate your events and hiring with EventOpportunity.</h1>
+        <div class="row">
+            <div class="text-col">
+                <h3>Why EventOpportunity?</h3>
+                <p>We know finding the right staff for corporate events can be hard. After many interviews, it’s tough
+                    to find reliable people. With EventOpportunity, you can easily hire skilled professionals for your
+                    events — whether you need hosts, coordinators, or support staff. Just post your job, and we’ll
+                    connect you with the best candidates.</p>
+            </div>
+            <div class="text-col">
+                <h3>Your Event, Our Priority!</h3>
+                <p>Finding the right staff for events can be challenging. With EventOpportunity, you can easily find
+                    skilled professionals for your corporate events across India. Choose the type of support you need
+                    and connect with us to discover the best candidates for your event.</p>
+            </div>
+        </div>
+    </section>
+    <section class="about-events">
+        <h1>Some of our Events.</h1>
+        <p>Here are some of our notable events that have been attended by our clients.</p>
+        <div class="row">
+            <div class="event-col">
+                <img src="NESCO3.jpeg" alt="NESCO Event">
+                <div class="layer">
+                    <h3>NESCO</h3>
+                </div>
+            </div>
+            <div class="event-col">
+                <img src="hawre3.jpeg" alt="HAWRE">
+                <div class="layer">
+                    <h3>HAWRE PROPERTIES</h3>
+                </div>
+            </div>
+            <div class="event-col">
+                <img src="taj3.jpeg" alt="TAJ HOTEL">
+                <div class="layer">
+                    <h3>TAJ HOTEL</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="type">
+        <h1>Types of Events We Cover.</h1>
+        <div class="row">
+            <div class="type-col">
+                <img src="corporate3.jpeg" alt="">
+                <h3>Corporate Events.</h3>
+                <p>From small meetings to big business conferences, we help you find the right people to make your corporate events run smoothly.</p>
+            </div>
+            <div class="type-col">
+                <img src="social1.jpeg" alt="">
+                <h3>Social Events.</h3>
+                <p>Whether it's a wedding, birthday, or family gathering, we connect you with skilled staff to make sure your special day is perfect.</p>
+            </div>
+            <div class="type-col">
+                <img src="sports.jpeg" alt="">
+                <h3>Sports Events.</h3>
+                <p>Whether it’s a local game or a big tournament, we offer staff who can help with everything from ticketing to managing the event on the field.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="type-col">
+                <img src="education.jpg" alt="">
+                <h3>Educational Events.</h3>
+                <p>For workshops, seminars, or school fairs, we provide staff who are experienced in organizing educational events, so everything goes as planned.</p>
+            </div>
+            <div class="type-col">
+                <img src="entertainment.jpg" alt="">
+                <h3>Entertainment Events.</h3>
+                <p>Concerts, festivals, and shows need a lot of coordination. We help you find the right team to keep everything on track, from managing the crowd to setting up the stage.</p>
+            </div>
+            <div class="type-col">
+                <img src="community.jpg" alt="">
+                <h3>Community Events.</h3>
+                <p>For charity events, fundraisers, or local fairs, we connect you with enthusiastic staff who care about making your community event a success.</p>
+            </div>
+        </div>
+    </section>
+    <section class="cta">
+        <h1>Enroll For Our Various Events <br> Anywhere From The World.</h1>
+        <a href="contact.html" class="hero-btn">Contact Us</a>
+    </section>
+    <section class="footer">
+        <h4>About Us</h4>
+        <p>EventOpportunity is India’s premier platform connecting skilled professionals with event organizers. Our mission is to bridge the gap between talent <br> and opportunity, ensuring that every event is staffed with the right people, and every professional has the chance <br> to showcase their skills. From corporate events to grand celebrations, we are dedicated to making each <br> occasion a success by matching the best talent with the right opportunities.</p>
+        <div class="icons">
+            <i class="fa fa-facebook"></i>
+            <i class="fa fa-twitter"></i>
+            <i class="fa fa-instagram"></i>
+            <i class="fa fa-linkedin"></i>
+        </div>
+    </section>
+<!-- JavaScript for Toggle Menu -->
+    <script>
+        var navLinks = document.getElementById("navLinks");
+        function showMenu() {
+            navLinks.style.right = "0";
+        }
+        function hideMenu() {
+            navLinks.style.right = "-200px";
+        }
+    </script>
+
+</body>
+
+</html>
